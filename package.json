@@ -1,0 +1,13 @@
+{
+  "name": "welaerner",
+  "version": "1.0.0",
+  "description": "Welearner WordPress Theme",
+  "author": "Ahsan habib Shaheen",
+  "license": "GPL-2.0-or-later",
+  "devDependencies": {
+    "bootstrap": "^5.0.0-beta1"
+  },
+  "scripts": {
+    "watch": "sass --watch assets/scss/style.scss assets/css/main.css"
+  }
+}

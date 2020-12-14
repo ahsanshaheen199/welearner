@@ -1,0 +1,39 @@
+.site-footer {
+    background-color: $footer_bg_color;
+    .welearner-footer-widget {
+        .widget-title {
+            color: #fff;
+            margin-bottom: 41px;
+            font-family: $heading_font_family;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        color: rgba(255,255,255, 0.46);
+        .social-icons {
+            li {
+                margin-right: 12px;
+                a {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 4px;
+                    background-color: rgba(242,242,242,0.22);
+                    display: inline-block;
+                    line-height: 40px;
+                    text-align: center;
+                    color: #67B3FF;
+                    i {
+                        line-height: 40px;
+                    }
+                    &:hover {
+                        color: #037BF4;
+                    }
+                    
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
