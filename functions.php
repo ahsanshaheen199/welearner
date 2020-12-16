@@ -141,9 +141,10 @@ add_action( 'widgets_init', 'welearner_widgets_init' );
  */
 function welearner_scripts() {
 	wp_enqueue_style( 'welearner-style', get_stylesheet_uri(), array(), WELEARNER_VERSION );
-	wp_style_add_data( 'welearner-style', 'rtl', 'replace' );
 	wp_enqueue_style( 'welearner-main-style', get_theme_file_uri('/assets/css/main.css'), array(), WELEARNER_VERSION );
+	wp_enqueue_style( 'welearner-google-font-style', welearner_fonts_url() );
 
+	wp_enqueue_script( 'welearner-navigation', get_theme_file_uri('/assets/js/bundle.js'), array('jquery'), WELEARNER_VERSION, true );
 	wp_enqueue_script( 'welearner-navigation', get_template_directory_uri() . '/js/navigation.js', array(), WELEARNER_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -151,6 +152,26 @@ function welearner_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'welearner_scripts' );
+
+function welearner_fonts_url() {
+	$fonts_url = '';
+
+	$font_families = array();
+
+	$font_families[] = 'Playfair Display:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i';
+	$font_families[] = 'Yantramanav:400,500,700,900';
+	$font_families[] = 'Roboto:400';
+
+	$query_args = array(
+		'family'  => urlencode( implode( '|', $font_families ) ),
+		'subset'  => urlencode( 'latin,latin-ext' ),
+		'display' => urlencode( 'fallback' ),
+	);
+
+	$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+
+	return esc_url_raw( $fonts_url );
+}
 
 /**
  * Implement the Custom Header feature.
