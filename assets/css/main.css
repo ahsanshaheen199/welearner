@@ -11943,6 +11943,43 @@ img {
   font-family: "Roboto", sans-serif;
 }
 
+/* Latest Posts
+--------------------------------------------- */
+
+.single-blog-post {
+  margin-bottom: 30px;
+}
+
+.single-blog-post .content-body h4,
+.single-blog-post .content-body .h4 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  margin: 20px 0 16px 0;
+}
+
+.single-blog-post .content-body h4 a,
+.single-blog-post .content-body .h4 a {
+  color: #101030;
+  transition: 0.3s;
+}
+
+.single-blog-post .content-body h4 a:hover,
+.single-blog-post .content-body .h4 a:hover {
+  color: #4640DE;
+}
+
+.single-blog-post .content-body a.readmore {
+  text-transform: capitalize;
+  font-size: 14px;
+  color: rgba(96, 88, 241, 0.8);
+  transition: 0.3s;
+}
+
+.single-blog-post .content-body a.readmore:hover {
+  color: #4640DE;
+}
+
 /* Footer
 --------------------------------------------- */
 

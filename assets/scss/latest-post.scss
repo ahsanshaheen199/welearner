@@ -1,0 +1,28 @@
+.single-blog-post {
+    margin-bottom: 30px;
+    .content-body {
+        h4 {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 30px;
+            margin: 20px 0 16px 0;
+            a {
+                color: #101030;
+                transition: .3s;
+                &:hover {
+                    color:#4640DE;
+                }
+            }
+        }
+
+        a.readmore {
+            text-transform: capitalize;
+            font-size: 14px;
+            color: rgba(96,88,241,0.8);
+            transition: .3s;
+            &:hover {
+                color:#4640DE;
+            }
+        }
+    }
+}
