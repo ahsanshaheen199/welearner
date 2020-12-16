@@ -21,10 +21,11 @@
             <?php 
                 while( $poststeacher->have_posts() ) :
                     $poststeacher->the_post();
+                    $thumb_bg_color = get_post_meta(get_the_ID(),'_welearner_teacher_thumbnail_bg_color',true);
             ?>
             <div class="single-creator-item">
                 <?php if( has_post_thumbnail() ): ?>
-                    <div class="thumbnail">
+                    <div style="background-color:<?php echo esc_attr($thumb_bg_color); ?>" class="thumbnail">
                         <a href="<?php the_permalink(); ?>">
                             <?php the_post_thumbnail(); ?>
                             <div class="overlay">
