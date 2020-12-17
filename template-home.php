@@ -6,6 +6,7 @@
 
 get_header();
 
+    get_template_part('template-parts/home/popular-topics');
     get_template_part('template-parts/home/popular-creator');
     get_template_part('template-parts/home/latest-blog');
 

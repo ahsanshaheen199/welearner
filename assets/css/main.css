@@ -11686,6 +11686,26 @@ img {
   height: auto;
 }
 
+.welearner-btn {
+  padding: 15px 30px;
+  border: 1px solid #4640DE;
+  color: #4640DE;
+  border-radius: 2px;
+  font-weight: 700;
+  font-family: "Yantramanav", sans-serif;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.welearner-btn:hover {
+  color: #fff;
+  background-color: #4640DE;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
 /* Tiny Slider
 --------------------------------------------- */
 
@@ -11839,6 +11859,45 @@ img {
   width: calc(100% / 70);
   height: 10px;
   float: left;
+}
+
+/* Popular Topics
+--------------------------------------------- */
+
+.single-topics-item {
+  border: 1px solid #E8EAEC;
+  border-radius: 14px;
+  display: flex;
+  padding: 15px 40px 15px 30px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.single-topics-item .icon {
+  background-color: red;
+  width: 56px;
+  height: 56px;
+  border-radius: 19px;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.single-topics-item .topic-title {
+  font-family: "Yantramanav", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.single-topics-item .topic-title a {
+  color: #1C2D41;
+  transition: 0.3s;
+}
+
+.single-topics-item .topic-title a:hover {
+  text-decoration: underline;
 }
 
 /* Popular Creator

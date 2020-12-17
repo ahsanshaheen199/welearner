@@ -3991,8 +3991,8 @@ var tns = function(options) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\server\www\welearner\wp-content\themes\welearner\assets\js\main.js */"./assets/js/main.js");
-module.exports = __webpack_require__(/*! D:\server\www\welearner\wp-content\themes\welearner\assets\scss\style.scss */"./assets/scss/style.scss");
+__webpack_require__(/*! D:\wamp64\www\welearner\wp-content\themes\welearner\assets\js\main.js */"./assets/js/main.js");
+module.exports = __webpack_require__(/*! D:\wamp64\www\welearner\wp-content\themes\welearner\assets\scss\style.scss */"./assets/scss/style.scss");
 
 
 /***/ })

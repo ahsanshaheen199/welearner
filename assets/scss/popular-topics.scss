@@ -1,0 +1,31 @@
+.single-topics-item {
+    border: 1px solid #E8EAEC;
+    border-radius: 14px;
+    display: flex;
+    padding: 15px 40px 15px 30px;
+    align-items: center;
+    margin-bottom: 60px;
+    .icon {
+        background-color: red;
+        width: 56px;
+        height: 56px;
+        border-radius: 19px;
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .topic-title {
+        font-family: $body_font_family;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 28px;
+        a {
+            color: #1C2D41;
+            transition: .3s;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
