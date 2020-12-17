@@ -36,6 +36,7 @@ img {
     font-family: $body_font_family;
     font-size: 16px;
     transition: .3s;
+    display: inline-block;
     &:hover {
         color: #fff;
         background-color: #4640DE;
@@ -44,4 +45,8 @@ img {
 
 .mb-60 {
     margin-bottom: 60px;
+}
+
+.course-rating-form {
+    display: none;
 }

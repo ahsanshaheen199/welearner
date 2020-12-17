@@ -3,8 +3,8 @@
         'taxonomy' => 'course_topic',
         'hide_empty' => false,
     ]);
-?>
-
+ 
+if ( ! empty( $welearner_topics ) && ! is_wp_error( $welearner_topics )): ?>
 <div class="popular-creator">
     <div class="container">
         <div class="row align-items-center mb-60">
@@ -17,7 +17,6 @@
                 <a href="#" class="welearner-btn">Show All</a>
             </div>
         </div>
-        <?php if ( ! empty( $welearner_topics ) && ! is_wp_error( $welearner_topics )): ?>
         <div class="row">
             <?php 
                 foreach( $welearner_topics as $topic ) :
@@ -44,6 +43,12 @@
             </div>
             <?php endforeach; ?>
         </div>
-        <?php endif; ?>
     </div>
 </div>
+<?php 
+    else:
+?>
+<div class="weleaner-alert">
+   <h2><?php _e('No Course Topic Found','welearner') ?></h2>     
+</div>
+<?php endif; ?>

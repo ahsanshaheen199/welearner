@@ -11695,6 +11695,7 @@ img {
   font-family: "Yantramanav", sans-serif;
   font-size: 16px;
   transition: 0.3s;
+  display: inline-block;
 }
 
 .welearner-btn:hover {
@@ -11704,6 +11705,10 @@ img {
 
 .mb-60 {
   margin-bottom: 60px;
+}
+
+.course-rating-form {
+  display: none;
 }
 
 /* Tiny Slider

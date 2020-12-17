@@ -120,6 +120,20 @@ var slider = Object(_node_modules_tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_
     }
   }
 });
+jQuery(".write-review-btn").on("click", function (e) {
+  jQuery(".course-rating-form").toggle();
+  e.preventDefault();
+});
+jQuery(".course-rating-form").on("submit", function () {});
+jQuery(".course-rating-form").find(".course-ratings i").each(function (index, item) {
+  jQuery(item).on("click", function () {
+    jQuery(this).prevAll().removeClass('dashicons-star-empty');
+    jQuery(this).prevAll().addClass('dashicons-star-filled');
+    jQuery(this).removeClass('dashicons-star-empty');
+    jQuery(this).addClass('dashicons-star-filled');
+    jQuery(this).siblings('input[name=course_rating]').val(jQuery(this).attr('data-value'));
+  });
+});
 
 /***/ }),
 

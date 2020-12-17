@@ -1,10 +1,10 @@
 <?php 
-    $poststeacher = new WP_Query([
+    $welearner_author = new WP_Query([
         'post_type' => 'teachers',
         'posts_per_page'    => -1
     ]);
 
-    if( $poststeacher->have_posts() ) :
+    if( $welearner_author->have_posts() ) :
 ?>
 
 <div class="popular-creator">
@@ -19,13 +19,18 @@
         </div>
         <div class="popular-creator-slider">
             <?php 
-                while( $poststeacher->have_posts() ) :
-                    $poststeacher->the_post();
-                    $thumb_bg_color = get_post_meta(get_the_ID(),'_welearner_teacher_thumbnail_bg_color',true);
+                while( $welearner_author->have_posts() ) :
+                    $welearner_author->the_post();
+                    $welearner_author_thumb_bg_color = get_post_meta(get_the_ID(),'_welearner_teacher_thumbnail_bg_color',true);
+                    if( !empty($welearner_author_thumb_bg_color) ) {
+                        $welearner_author_thumb_bg = 'style="background-color:'.esc_attr($welearner_author_thumb_bg_color).'"';
+                    } else {
+                        $welearner_author_thumb_bg = '';
+                    }
             ?>
             <div class="single-creator-item">
                 <?php if( has_post_thumbnail() ): ?>
-                    <div style="background-color:<?php echo esc_attr($thumb_bg_color); ?>" class="thumbnail">
+                    <div <?php echo wp_kses_post($welearner_author_thumb_bg); ?> class="thumbnail">
                         <a href="<?php the_permalink(); ?>">
                             <?php the_post_thumbnail(); ?>
                             <div class="overlay">
@@ -61,7 +66,11 @@
         </div>
     </div>
 </div>
-
+<?php 
+    else:
+?>
+<div class="weleaner-alert">
+   <h2><?php _e('No Course Author Found','welearner') ?></h2>     
+</div>
 <?php
-
     endif;

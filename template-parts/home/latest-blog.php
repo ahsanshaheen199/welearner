@@ -1,10 +1,10 @@
 <?php
-    $latestposts = new WP_Query([
+    $welearner_latestposts = new WP_Query([
         'post_type' => 'post',
         'posts_per_page'    => 3
     ]);
 
-    if( $latestposts->have_posts() ) :
+    if( $welearner_latestposts->have_posts() ) :
 ?>
 <div class="latest-blog">
     <div class="container">
@@ -17,8 +17,8 @@
         </div>
         <div class="row justify-content-center">
             <?php 
-                while( $latestposts->have_posts() ) :
-                    $latestposts->the_post();
+                while( $welearner_latestposts->have_posts() ) :
+                    $welearner_latestposts->the_post();
             ?>
             <div class="col-lg-4 col-sm-6">
                 <div class="single-blog-post">
@@ -41,6 +41,12 @@
             ?>
         </div>
     </div>
+</div>
+<?php 
+    else:
+?>
+<div class="weleaner-alert">
+   <h2><?php _e('No Blog Post Found','welearner') ?></h2>     
 </div>
 <?php
     endif;
