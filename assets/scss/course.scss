@@ -1,0 +1,86 @@
+.single-course-item {
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #EEEDFD;
+    border-radius: 5px;
+    .course-content-body {
+        margin: 20px 0;
+        border-bottom: 1px solid #EEEDFD;
+        .course-meta {
+            a {
+                padding: 5px 20px;
+                border-radius: 19px;
+                color: white;
+                font-size: 16px;
+                font-family: $body_font_family;
+                display: inline-block;
+            }
+            .ratings {
+                i {
+                    font-size: 14px;
+                    width: 14px;
+                    height: 14px;
+                    margin-left: 4px;
+                }
+                i.dashicons-star-empty {
+                    color: #D3D2DF;
+                }
+                i.dashicons-star-filled {
+                    color: #FFC107;
+                }
+            }
+        }
+        h4 {
+            font-size: 24px;
+            line-height: 32px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            a {
+                color: #1C2D41;
+                transition: .3s;
+                &:hover {
+                    color:#4640DE;
+                }
+            }
+        }
+        .course-author{ 
+            img {
+                width: 30px;
+                border-radius: 50%;
+                margin-right: 15px;
+            }
+            h5 {
+                font-family: $body_font_family;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 25px;
+                margin-bottom: 0;
+                color: rgba(28,45,65,.5);
+            }
+            margin-bottom: 10px;
+        }
+    }
+    .course-content-footer {
+        del {
+            font-family: $body_font_family;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+            color: #D3D2DF;
+        }
+        span {
+            font-family: $body_font_family;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 27px;
+            color: #4640DE;
+            margin-left: 10px;
+        }
+        .welearner-btn {
+            padding: 11px;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 25px;
+        }
+    }
+}

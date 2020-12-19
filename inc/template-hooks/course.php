@@ -50,7 +50,7 @@ function welearner_get_course_reviews_func() {
                 <?php echo get_avatar($review->user_id,'60'); ?>
             </div>
             <div class="review-info">
-                <?php echo welearner_start_rating_html($review->rating); ?>
+                <?php echo welearner_course_rating_html($review->rating); ?>
                 <p><?php echo wp_kses_post($review->comment_content); ?></p>
             </div>
         </div>
@@ -60,7 +60,7 @@ function welearner_get_course_reviews_func() {
 }
 
 
-function welearner_start_rating_html($value = 5) {
+function welearner_course_rating_html($value = 5) {
     if( $value == '1' ) {
         return '<i class="dashicons dashicons-star-filled"></i><i class="dashicons dashicons-star-empty"></i><i class="dashicons dashicons-star-empty"></i><i class="dashicons dashicons-star-empty"></i><i class="dashicons dashicons-star-empty"></i>';
     } elseif( $value == '2' ) {
@@ -71,5 +71,28 @@ function welearner_start_rating_html($value = 5) {
         return '<i class="dashicons dashicons-star-filled"></i><i class="dashicons dashicons-star-filled"></i><i class="dashicons dashicons-star-filled"></i><i class="dashicons dashicons-star-filled"></i><i class="dashicons dashicons-star-empty"></i>';
     } elseif( $value == '5' ) {
         return '<i class="dashicons dashicons-star-filled"></i><i class="dashicons dashicons-star-filled"></i><i class="dashicons dashicons-star-filled"></i><i class="dashicons dashicons-star-filled"></i><i class="dashicons dashicons-star-filled"></i>';
+    } else {
+        return '<i class="dashicons dashicons-star-empty"></i><i class="dashicons dashicons-star-empty"></i><i class="dashicons dashicons-star-empty"></i><i class="dashicons dashicons-star-empty"></i><i class="dashicons dashicons-star-empty"></i>';
     }
+}
+
+function welearner_course_avarage_rating($course_id = 0) {
+    global $wpdb;
+
+    $rating = $wpdb->get_row("select COUNT(meta_value) as rating_count, SUM(meta_value) as rating_sum 
+        from {$wpdb->comments}
+        INNER JOIN {$wpdb->commentmeta} 
+        ON {$wpdb->comments}.comment_ID = {$wpdb->commentmeta}.comment_id 
+        WHERE {$wpdb->comments}.comment_post_ID = {$course_id} 
+        AND {$wpdb->comments}.comment_type = 'course_review'
+        AND meta_key = '_course_rating' ;"
+    );
+
+    $rating_avg = 0;
+
+    if( $rating->rating_count ) {
+        $rating_avg = floor($rating->rating_sum / $rating->rating_count);
+    }
+
+    return $rating_avg;
 }
