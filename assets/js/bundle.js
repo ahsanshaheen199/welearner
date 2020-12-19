@@ -97,43 +97,65 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/tiny-slider/src/tiny-slider */ "./node_modules/tiny-slider/src/tiny-slider.js");
 
-var slider = Object(_node_modules_tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__["tns"])({
-  container: '.popular-creator-slider',
-  items: 3,
-  gutter: 30,
-  slideBy: "page",
-  autoplay: true,
-  autoplayButton: false,
-  autoplayButtonOutput: false,
-  mouseDrag: true,
-  controls: false,
-  nav: false,
-  responsive: {
-    575: {
-      items: 1
-    },
-    768: {
-      items: 2
-    },
-    991: {
-      items: 3
+
+if (jQuery('.popular-creator-slider').length) {
+  var slider = Object(_node_modules_tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__["tns"])({
+    container: '.popular-creator-slider',
+    items: 3,
+    gutter: 30,
+    slideBy: "page",
+    autoplay: true,
+    autoplayButton: false,
+    autoplayButtonOutput: false,
+    mouseDrag: true,
+    controls: false,
+    nav: false,
+    responsive: {
+      575: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      991: {
+        items: 3
+      }
     }
-  }
-});
-jQuery(".write-review-btn").on("click", function (e) {
-  jQuery(".course-rating-form").toggle();
-  e.preventDefault();
-});
-jQuery(".course-rating-form").on("submit", function () {});
-jQuery(".course-rating-form").find(".course-ratings i").each(function (index, item) {
-  jQuery(item).on("click", function () {
-    jQuery(this).prevAll().removeClass('dashicons-star-empty');
-    jQuery(this).prevAll().addClass('dashicons-star-filled');
-    jQuery(this).removeClass('dashicons-star-empty');
-    jQuery(this).addClass('dashicons-star-filled');
-    jQuery(this).siblings('input[name=course_rating]').val(jQuery(this).attr('data-value'));
   });
-});
+}
+
+(function ($) {
+  $(".write-review-btn").on("click", function (e) {
+    $(".course-rating-form").toggle();
+    e.preventDefault();
+  });
+  $(".course-rating-form").on("submit", function (e) {
+    e.preventDefault();
+    $.ajax({
+      type: 'POST',
+      url: welearner_obj.ajax_url,
+      data: {
+        action: 'weleaner_add_course_review',
+        user_id: $(this).find('input[name=user_id').val(),
+        course_rating: $(this).find('input[name=course_rating').val(),
+        course_review: $(this).find('textarea[name=review').val(),
+        course_id: $(this).find('input[name=course_id').val()
+      },
+      success: function success(response) {
+        location.reload();
+      }
+    });
+  });
+  $(".course-rating-form").find(".course-ratings i").each(function (index, item) {
+    $(item).on("click", function () {
+      $(this).prevAll().removeClass('dashicons-star-empty');
+      $(this).prevAll().addClass('dashicons-star-filled');
+      $(this).removeClass('dashicons-star-empty');
+      $(this).addClass('dashicons-star-filled');
+      $(this).siblings('input[name=course_rating]').val($(this).attr('data-value'));
+    });
+  });
+})(jQuery);
 
 /***/ }),
 
