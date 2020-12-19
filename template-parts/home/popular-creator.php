@@ -8,7 +8,7 @@
 ?>
 
 <div class="popular-creator">
-    <div class="container">
+    <div data-bg-image="<?php echo esc_url(get_theme_file_uri('assets/images/round-shape.png')); ?>" class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section-title text-center">

@@ -47,6 +47,27 @@ img {
     margin-bottom: 60px;
 }
 
+.mb-90 {
+    margin-bottom: 90px;
+}
+
 .course-rating-form {
     display: none;
+}
+
+.section-title {
+    margin-bottom: 50px;
+    h2 {
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 1.36;
+        margin-bottom: 25px;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 1.35;
+        color: #556170;
+        margin-bottom: 0;
+    }
 }

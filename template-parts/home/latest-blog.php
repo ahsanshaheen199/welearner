@@ -6,7 +6,7 @@
 
     if( $welearner_latestposts->have_posts() ) :
 ?>
-<div class="latest-blog">
+<div data-bg-image="<?php echo esc_url(get_theme_file_uri('assets/images/blog-bg-shape.png')); ?>" class="latest-blog">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">

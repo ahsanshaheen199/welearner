@@ -25,7 +25,7 @@ if ( ! empty( $welearner_topics ) && ! is_wp_error( $welearner_topics )): ?>
                 <div class="single-topics-item">
                     <?php 
                         if( get_term_meta($topic->term_id,'_course_topic_thumbnail_id',true) ) :
-                            $weleaner_topic_icon_bg_color = get_term_meta($topic->term_id,'_course_topic_color',true);
+                            $weleaner_topic_icon_bg_color = get_term_meta($topic->term_id,'_course_topic_bg_color',true);
                             if( !empty($weleaner_topic_icon_bg_color) ) {
                                 $weleaner_topic_icon_bg = 'style="background-color:'.esc_attr($weleaner_topic_icon_bg_color).'"';
                             } else {

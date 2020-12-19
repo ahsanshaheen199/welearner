@@ -124,7 +124,40 @@ if (jQuery('.popular-creator-slider').length) {
   });
 }
 
+if (jQuery('.testimonial-slider').length) {
+  var testimonialSlider = Object(_node_modules_tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__["tns"])({
+    container: '.testimonial-slider',
+    items: 3,
+    gutter: 110,
+    slideBy: "page",
+    autoplay: true,
+    autoplayButton: false,
+    autoplayButtonOutput: false,
+    mouseDrag: true,
+    controls: false,
+    nav: false,
+    responsive: {
+      575: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      991: {
+        items: 3
+      }
+    }
+  });
+}
+
 (function ($) {
+  $('[data-bg-image]').each(function () {
+    if ($(this).attr("data-bg-image")) {
+      $(this).css({
+        'background-image': 'url(' + $(this).data('bg-image') + ')'
+      });
+    }
+  });
   $(".write-review-btn").on("click", function (e) {
     $(".course-rating-form").toggle();
     e.preventDefault();

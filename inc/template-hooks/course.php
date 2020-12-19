@@ -20,7 +20,8 @@ function weleaner_add_course_review() {
     $comment_id = wp_new_comment( $commentdata );
 
     if ( $comment_id ) {
-		add_comment_meta( $comment_id, '_course_rating', $_POST['course_rating'] );
+        add_comment_meta( $comment_id, '_course_rating', $_POST['course_rating'] );
+        welearner_update_avarage_rating($_POST['course_id']);
     }
     
     wp_send_json_success($comment_id);
@@ -30,6 +31,7 @@ function weleaner_add_course_review() {
 add_action('welearner_get_course_reviews','welearner_get_course_reviews_func');
 function welearner_get_course_reviews_func() {
     global $wpdb;
+    $course_id = get_the_ID();
     $reviews = $wpdb->get_results("select {$wpdb->comments}.comment_ID, 
         {$wpdb->comments}.comment_post_ID, 
         {$wpdb->comments}.comment_author, 
@@ -40,7 +42,8 @@ function welearner_get_course_reviews_func() {
         {$wpdb->commentmeta}.meta_value as rating
         from {$wpdb->comments}
         INNER JOIN {$wpdb->commentmeta} 
-        ON {$wpdb->comments}.comment_ID = {$wpdb->commentmeta}.comment_id"
+        ON {$wpdb->comments}.comment_ID = {$wpdb->commentmeta}.comment_id
+        WHERE {$wpdb->comments}.comment_post_ID = {$course_id}"
         );
     ?>
     <div class="single-course-reviews mt-5">
@@ -76,7 +79,7 @@ function welearner_course_rating_html($value = 5) {
     }
 }
 
-function welearner_course_avarage_rating($course_id = 0) {
+function welearner_update_avarage_rating($course_id = 0) {
     global $wpdb;
 
     $rating = $wpdb->get_row("select COUNT(meta_value) as rating_count, SUM(meta_value) as rating_sum 
@@ -94,5 +97,9 @@ function welearner_course_avarage_rating($course_id = 0) {
         $rating_avg = floor($rating->rating_sum / $rating->rating_count);
     }
 
-    return $rating_avg;
+    update_post_meta($course_id,'_welearner_course_avg_rating',$rating_avg);
+}
+
+function welearner_currency() {
+    return apply_filters('welearner_currency','$');
 }

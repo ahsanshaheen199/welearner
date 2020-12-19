@@ -1,17 +1,20 @@
 <?php
     $welearner_courses = new WP_Query([
         'post_type'     => 'courses',
-        'posts_per_page'=> '-1'
+        'posts_per_page'=> '-1',
+        'order'         => 'DESC',
+        'meta_key'   => '_welearner_course_avg_rating',
+        'orderby'    => 'meta_value_num',
     ]);
  
 if ( $welearner_courses->have_posts() ): 
 ?>
-<div class="tranding-courses">
+<div class="toprated-courses">
     <div class="container">
         <div class="row align-items-center mb-60">
             <div class="col-lg-6">
                 <div class="section-title mb-0">
-                    <h2 class="mb-0">Tranding</h2>
+                    <h2 class="mb-0">Top Rated</h2>
                 </div>
             </div>
             <div class="col-lg-6 text-lg-end">

@@ -11707,8 +11707,31 @@ img {
   margin-bottom: 60px;
 }
 
+.mb-90 {
+  margin-bottom: 90px;
+}
+
 .course-rating-form {
   display: none;
+}
+
+.section-title {
+  margin-bottom: 50px;
+}
+
+.section-title h2,
+.section-title .h2 {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.36;
+  margin-bottom: 25px;
+}
+
+.section-title p {
+  font-size: 20px;
+  line-height: 1.35;
+  color: #556170;
+  margin-bottom: 0;
 }
 
 /* Tiny Slider
@@ -11879,7 +11902,7 @@ img {
 }
 
 .single-topics-item .icon {
-  background-color: red;
+  background-color: #E8EAEC;
   width: 56px;
   height: 56px;
   border-radius: 19px;
@@ -11927,6 +11950,7 @@ img {
   font-size: 16px;
   font-family: "Yantramanav", sans-serif;
   display: inline-block;
+  background-color: #E8EAEC;
 }
 
 .single-course-item .course-content-body .course-meta .ratings i {
@@ -12007,26 +12031,75 @@ img {
   line-height: 25px;
 }
 
-/* Popular Creator
+/* Testimonials
 --------------------------------------------- */
 
-.section-title {
-  margin-bottom: 50px;
+.testimonial-area {
+  padding: 130px 0;
+  background: #1e5799;
+  background: linear-gradient(to bottom, #1e5799 0%, #207cca 0%, #fafafe 0%, #ffffff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#1e5799", endColorstr="#ffffff",GradientType=0 );
 }
 
-.section-title h2,
-.section-title .h2 {
-  font-size: 44px;
+.testimonial-area .testimonial-section-description {
+  background-repeat: no-repeat !important;
+  padding-left: 90px;
+}
+
+.testimonial-area .testimonial-section-description p {
+  font-family: "Playfair Display", serif;
   font-weight: 700;
-  line-height: 1.36;
+  font-size: 20px;
+  line-height: 32px;
+  margin-bottom: 0;
+}
+
+.single-testimonial-item .reviewer-thumb {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 20px;
+}
+
+.single-testimonial-item .reviewer-thumb img {
+  border-radius: 50%;
+}
+
+.single-testimonial-item .reviewer-info {
   margin-bottom: 25px;
 }
 
-.section-title p {
+.single-testimonial-item .reviewer-info h3,
+.single-testimonial-item .reviewer-info .h3 {
   font-size: 20px;
-  line-height: 1.35;
-  color: #556170;
+  color: #101030;
   margin-bottom: 0;
+}
+
+.single-testimonial-item .reviewer-info span {
+  display: inline-block;
+  font-family: "Yantramanav", sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+  color: #1C2D41;
+}
+
+.single-testimonial-item .review-content p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.single-testimonial-item .review-content p + p {
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 0;
+  color: #101030;
+}
+
+/* Popular Creator
+--------------------------------------------- */
+
+.popular-creator .container {
+  background-repeat: no-repeat !important;
 }
 
 .popular-creator .single-creator-item {
@@ -12111,6 +12184,10 @@ img {
 
 /* Latest Posts
 --------------------------------------------- */
+
+.latest-blog {
+  padding: 130px 0;
+}
 
 .single-blog-post {
   margin-bottom: 30px;
