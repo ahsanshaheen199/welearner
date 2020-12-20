@@ -12307,6 +12307,10 @@ img {
   line-height: 30px;
 }
 
+.site-footer .welearner-footer-widget .social-icons {
+  margin-top: 50px;
+}
+
 .site-footer .welearner-footer-widget .social-icons li {
   margin-right: 12px;
 }

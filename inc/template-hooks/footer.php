@@ -11,19 +11,9 @@
 			<div class="footer-widgets">
 				<div class="row">
 					<?php if( is_active_sidebar('footer-sidebar-1') ): ?>
-					<div class="col-lg-4 col-sm-6">
-						<div class="welearner-footer-widget about-company">
-							<h2 class="widget-title">Welearner</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed justo nulla,</p>
-							<div class="social-icons">
-								<ul class="list-unstyled d-flex">
-									<li><a href="#"><i class="dashicons dashicons-facebook-alt"></i></a></li>
-									<li><a href="#"><i class="dashicons dashicons-twitter"></i></a></li>
-									<li><a href="#"><i class="dashicons dashicons-linkedin"></i></a></li>
-								</ul>
-							</div>
+						<div class="col-lg-4 col-sm-6">
+							<?php dynamic_sidebar('footer-sidebar-1') ?>	
 						</div>
-					</div>
 					<?php endif; ?>
 
 					<?php if( is_active_sidebar('footer-sidebar-2') ): ?>
