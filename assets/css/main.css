@@ -12285,9 +12285,16 @@ img {
 
 .site-footer {
   background-color: #021E40;
+  background-repeat: no-repeat;
+  padding: 110px 0;
+}
+
+.site-footer .row .col-sm-6:last-child .welearner-footer-widget {
+  margin-bottom: 0;
 }
 
 .site-footer .welearner-footer-widget {
+  margin-bottom: 50px;
   color: rgba(255, 255, 255, 0.46);
 }
 
@@ -12325,5 +12332,25 @@ img {
 
 .site-footer .welearner-footer-widget .social-icons li:last-child {
   margin-right: 0;
+}
+
+.site-footer .welearner-footer-widget ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer .welearner-footer-widget.widget_nav_menu ul li {
+  margin-bottom: 10px;
+}
+
+.site-footer .welearner-footer-widget.widget_nav_menu ul li:last-child {
+  margin-bottom: 0;
+}
+
+.site-footer .welearner-footer-widget.widget_nav_menu ul li a {
+  font-family: "Yantramanav", sans-serif;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.46);
 }
 

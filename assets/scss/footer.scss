@@ -1,6 +1,16 @@
 .site-footer {
     background-color: $footer_bg_color;
+    background-repeat: no-repeat;
+    padding: 110px 0;
+    .row {
+        .col-sm-6:last-child {
+            .welearner-footer-widget {
+                margin-bottom: 0;
+            }
+        }
+    }
     .welearner-footer-widget {
+        margin-bottom: 50px;
         .widget-title {
             color: #fff;
             margin-bottom: 41px;
@@ -32,6 +42,28 @@
                 }
                 &:last-child {
                     margin-right: 0;
+                }
+            }
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        &.widget_nav_menu {
+            ul {
+                li {
+                    margin-bottom: 10px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    a {
+                        font-family: $body_font_family;
+                        font-size: 16px;
+                        color: rgba(255,255,255, 0.46);
+                    }
                 }
             }
         }
