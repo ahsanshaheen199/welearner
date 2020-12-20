@@ -1,4 +1,5 @@
 .hero-area {
+    background-repeat: no-repeat;
     .banner-wrapper {
         position: relative;
         padding: 280px 0 220px;
@@ -66,6 +67,14 @@
 
 @media (max-width: 575px) {
     .hero-area .banner-wrapper {
-        padding: 200px 0 200px;
+        padding: 200px 0 100px;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero-area .course-search-form form input[type=submit] {
+        position: static;
+        width: 100%;
+        transform: translateY(0);
     }
 }

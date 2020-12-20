@@ -36,6 +36,9 @@ function welearner_customize_register( $wp_customize ) {
 
 	//welearner
 
+	// Hero
+	require get_theme_file_path('inc/customizer/hero.php');
+
 	// Popular Topics
 	require get_theme_file_path('inc/customizer/popular-topics.php');
 
@@ -56,6 +59,9 @@ function welearner_customize_register( $wp_customize ) {
 
 	// Call to action
 	require get_theme_file_path('inc/customizer/cta.php');
+
+	// Call to action
+	require get_theme_file_path('inc/customizer/footer.php');
 	
 }
 add_action( 'customize_register', 'welearner_customize_register' );

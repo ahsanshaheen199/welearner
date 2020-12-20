@@ -12180,15 +12180,15 @@ img {
   }
 
   .site-header .main-menu .submenu-button:before {
-    content: "\F054";
-    font-family: "Font Awesome 5 Free";
+    content: "\F345";
+    font-family: "Dashicons";
     font-size: 8px;
     font-weight: 900;
   }
 
   .site-header .main-menu .submenu-button.submenu-opened:before {
-    content: "\F077";
-    font-family: "Font Awesome 5 Free";
+    content: "\F343";
+    font-family: "Dashicons";
     font-weight: 900;
   }
 }
@@ -12247,6 +12247,7 @@ img {
 --------------------------------------------- */
 
 .hero-area {
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
 }
@@ -12320,7 +12321,15 @@ img {
 
 @media (max-width: 575px) {
   .hero-area .banner-wrapper {
-    padding: 200px 0 200px;
+    padding: 200px 0 100px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-area .course-search-form form input[type=submit] {
+    position: static;
+    width: 100%;
+    transform: translateY(0);
   }
 }
 
@@ -12705,7 +12714,8 @@ img {
   }
 
   .single-cta .cta-btn-wrapper {
-    bottom: 40px;
+    position: static;
+    transform: translateX(0);
   }
 
   .single-cta h2,
@@ -12715,6 +12725,7 @@ img {
 
   .single-cta p {
     width: auto;
+    margin-bottom: 30px;
   }
 }
 

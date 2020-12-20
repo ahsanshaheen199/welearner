@@ -5,8 +5,16 @@
 
  add_action('welearner_footer','welearner_footer_func');
 
- function welearner_footer_func() { ?>
-    <footer data-bg-image="<?php echo esc_url(get_theme_file_uri('assets/images/footer-bg.png')); ?>" id="colophon" class="site-footer">
+ function welearner_footer_func() {
+    $welearner_footer_section_bg_img = get_theme_mod('footer_section_bg_img','');
+
+    if( ! empty($welearner_footer_section_bg_img) ) {
+        $welearner_footer_section_bg_img_url = $welearner_footer_section_bg_img;
+    } else {
+		$welearner_footer_section_bg_img_url = get_theme_file_uri('assets/images/footer-bg.png');
+	} 	
+	?>
+    <footer data-bg-image="<?php echo esc_url($welearner_footer_section_bg_img_url); ?>" id="colophon" class="site-footer">
 		<div class="container">
 			<div class="footer-widgets">
 				<div class="row">
