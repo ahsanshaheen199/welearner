@@ -124,10 +124,11 @@ function welearner_scripts() {
 	wp_enqueue_style( 'welearner-style', get_stylesheet_uri(), array(), WELEARNER_VERSION );
 	wp_enqueue_style( 'welearner-main-style', get_theme_file_uri('/assets/css/main.css'), array(), WELEARNER_VERSION );
 	wp_enqueue_style( 'welearner-google-font-style', welearner_fonts_url() );
+	wp_enqueue_style('dashicons');
 
 	wp_enqueue_script( 'welearner-main', get_theme_file_uri('/assets/js/bundle.js'), array('jquery'), WELEARNER_VERSION, true );
 	wp_localize_script( 'welearner-main', 'welearner_obj' , [
-		'ajax_url'	=> admin_url('admin-ajax')
+		'ajax_url'	=> admin_url('admin-ajax.php')
 	] );
 	wp_enqueue_script( 'welearner-navigation',get_theme_file_uri('/assets/js/navigation.js'), array(), WELEARNER_VERSION, true );
 

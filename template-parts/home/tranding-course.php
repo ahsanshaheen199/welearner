@@ -101,11 +101,11 @@ if ( $welearner_courses->have_posts() ):
                     </div>
                     <div class="course-content-footer d-flex align-items-center justify-content-between">
                         <div class="course-price">
-                            <?php if( get_post_meta(get_the_ID(),'_welearner_course_regular_price',true) ) : ?>
-                                <del><?php echo welearner_currency();echo esc_html(get_post_meta(get_the_ID(),'_welearner_course_regular_price',true)); ?></del>
-                            <?php endif; ?>
                             <?php if( get_post_meta(get_the_ID(),'_welearner_course_sale_price',true) ) : ?>
-                                <span><?php echo welearner_currency();echo esc_html(get_post_meta(get_the_ID(),'_welearner_course_sale_price',true)); ?></span>
+                                <del><?php echo welearner_currency();echo esc_html(get_post_meta(get_the_ID(),'_welearner_course_sale_price',true)); ?></del>
+                            <?php endif; ?>
+                            <?php if( get_post_meta(get_the_ID(),'_welearner_course_regular_price',true) ) : ?>
+                                <span><?php echo welearner_currency();echo esc_html(get_post_meta(get_the_ID(),'_welearner_course_regular_price',true)); ?></span>
                             <?php endif; ?>
                         </div>
                         <div class="preview-button">
