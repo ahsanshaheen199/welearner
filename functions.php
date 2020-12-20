@@ -129,7 +129,7 @@ function welearner_scripts() {
 	wp_localize_script( 'welearner-main', 'welearner_obj' , [
 		'ajax_url'	=> admin_url('admin-ajax')
 	] );
-	wp_enqueue_script( 'welearner-navigation', get_template_directory_uri() . '/js/navigation.js', array(), WELEARNER_VERSION, true );
+	wp_enqueue_script( 'welearner-navigation',get_theme_file_uri('/assets/js/navigation.js'), array(), WELEARNER_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
