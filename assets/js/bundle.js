@@ -188,6 +188,77 @@ if (jQuery('.testimonial-slider').length) {
       $(this).siblings('input[name=course_rating]').val($(this).attr('data-value'));
     });
   });
+  $(".main-menu").menumaker({
+    title: '<span></span>',
+    format: "multitoggle"
+  });
+})(jQuery);
+
+/***/ }),
+
+/***/ "./assets/js/menumaker.js":
+/*!********************************!*\
+  !*** ./assets/js/menumaker.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function ($) {
+  $.fn.menumaker = function (options) {
+    var cssmenu = $(this),
+        settings = $.extend({
+      title: "Menu",
+      format: "dropdown",
+      sticky: false
+    }, options);
+    return this.each(function () {
+      cssmenu.prepend('<div id="menu-button">' + settings.title + '</div>');
+      $(this).find("#menu-button").on('click', function () {
+        $(this).toggleClass('menu-opened');
+        var mainmenu = $(this).next('ul');
+
+        if (mainmenu.hasClass('open')) {
+          mainmenu.slideUp('fast').removeClass('open');
+        } else {
+          mainmenu.slideDown('fast').addClass('open');
+
+          if (settings.format === "dropdown") {
+            mainmenu.find('ul').slideDown();
+          }
+        }
+      });
+      cssmenu.find('li ul').parent().addClass('has-sub-item');
+
+      var multiTg = function multiTg() {
+        cssmenu.find(".has-sub-item").prepend('<span class="submenu-button"></span>');
+        cssmenu.find('.submenu-button').on('click', function () {
+          $(this).toggleClass('submenu-opened');
+
+          if ($(this).siblings('ul').hasClass('open')) {
+            $(this).siblings('ul').removeClass('open').slideUp('fast');
+          } else {
+            $(this).siblings('ul').addClass('open').slideDown('fast');
+          }
+        });
+      };
+
+      if (settings.format === 'multitoggle') multiTg();else cssmenu.addClass('dropdown');
+      if (settings.sticky === true) cssmenu.css('position', 'fixed');
+
+      var resizeFix = function resizeFix() {
+        if ($(window).width() > 992) {
+          cssmenu.find('ul').show();
+        }
+
+        if ($(window).width() < 992) {
+          cssmenu.find('ul').hide().removeClass('open');
+        }
+      };
+
+      resizeFix();
+      return $(window).on('resize', resizeFix);
+    });
+  };
 })(jQuery);
 
 /***/ }),
@@ -4054,12 +4125,13 @@ var tns = function(options) {
 /***/ }),
 
 /***/ 0:
-/*!**********************************************************!*\
-  !*** multi ./assets/js/main.js ./assets/scss/style.scss ***!
-  \**********************************************************/
+/*!***********************************************************************************!*\
+  !*** multi ./assets/js/menumaker.js ./assets/js/main.js ./assets/scss/style.scss ***!
+  \***********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(/*! D:\wamp64\www\welearner\wp-content\themes\welearner\assets\js\menumaker.js */"./assets/js/menumaker.js");
 __webpack_require__(/*! D:\wamp64\www\welearner\wp-content\themes\welearner\assets\js\main.js */"./assets/js/main.js");
 module.exports = __webpack_require__(/*! D:\wamp64\www\welearner\wp-content\themes\welearner\assets\scss\style.scss */"./assets/scss/style.scss");
 

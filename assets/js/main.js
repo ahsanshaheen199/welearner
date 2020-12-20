@@ -95,4 +95,9 @@ if( jQuery('.testimonial-slider').length ) {
       $(this).siblings('input[name=course_rating]').val($(this).attr('data-value'));
     });
   });
+
+  $(".main-menu").menumaker({
+      title: '<span></span>',
+      format: "multitoggle"
+  });
 })(jQuery);

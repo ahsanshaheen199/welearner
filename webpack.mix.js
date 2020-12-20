@@ -11,7 +11,8 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('assets/js/main.js', 'assets/js/bundle.js').sass('assets/scss/style.scss', 'assets/css/main.css');
+mix.js(['assets/js/menumaker.js','assets/js/main.js'], 'assets/js/bundle.js')
+.sass('assets/scss/style.scss', 'assets/css/main.css');
 
 // Full API
 // mix.js(src, output);

@@ -6,6 +6,7 @@
 
 get_header();
 
+    get_template_part('template-parts/home/hero');
     get_template_part('template-parts/home/popular-topics');
     get_template_part('template-parts/home/tranding-course');
     get_template_part('template-parts/home/toprated-course');

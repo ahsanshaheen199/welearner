@@ -1,0 +1,71 @@
+.hero-area {
+    .banner-wrapper {
+        position: relative;
+        padding: 280px 0 220px;
+        z-index: 2;
+        img.person-img {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
+    display: flex;
+    align-items: center;
+    .banner-content {
+        h2 {
+            font-size: 65px;
+            line-height: 72px;
+            color: #fff;
+            margin-bottom: 35px;
+        }
+        p {
+            font-size: 20px;
+            color: #fff;
+            line-height: 40px;
+            margin-bottom: 0;
+        }
+    }
+
+    .course-search-form {
+        margin-top: 50px;
+        form {
+            position: relative;
+            input[type="text"] {
+                width: 100%;
+                height: 90px;
+                padding-left: 40px;
+            }
+            input[type="submit"] {
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                transform: translateY(-50%);
+                padding: 18px 55px;
+                border: none;
+                cursor: pointer;
+                color: #fff;
+                background-color: #4640DE;
+                border-radius: 2px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 991px) {
+    .hero-area .banner-content h2 {
+       font-size: 44px;
+       line-height: 1;
+    }
+
+    .hero-area .banner-content p {
+        line-height: 1;
+    }
+}
+
+@media (max-width: 575px) {
+    .hero-area .banner-wrapper {
+        padding: 200px 0 200px;
+    }
+}

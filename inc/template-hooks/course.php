@@ -103,3 +103,15 @@ function welearner_update_avarage_rating($course_id = 0) {
 function welearner_currency() {
     return apply_filters('welearner_currency','$');
 }
+
+
+function welearner_course_search_template($template)   
+{    
+  global $wp_query;   
+  $post_type = get_query_var('post_type');   
+  if( $wp_query->is_search && $post_type == 'courses' ) {
+    return locate_template('course-search.php');
+  }   
+  return $template;   
+}
+add_filter('template_include', 'welearner_course_search_template');  
