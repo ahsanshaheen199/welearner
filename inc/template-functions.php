@@ -35,3 +35,26 @@ function welearner_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'welearner_pingback_header' );
+
+
+// welearner post category for customizer
+
+function welearner_blogpost_category() {
+	$cats = get_terms([
+		'taxonomy'		=> 'category',
+		'hide_empty' 	=> true	
+	]);
+
+	$catarr = [];
+
+	$catarr[''] =	__('Select a category','welearner');
+
+	if( !empty( $cats ) && ! is_wp_error( $cats ) ) {
+		foreach( $cats as $cat ) {
+			$catarr[$cat->term_id] = $cat->name;
+		}
+	}
+	
+	
+	return $catarr;
+}

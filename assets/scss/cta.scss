@@ -1,5 +1,5 @@
 .cta-area {
-    padding-bottom: 130px;
+    padding-bottom: 80px;
 }
 
 .single-cta {
@@ -7,13 +7,14 @@
     text-align: center;
     min-height: 350px;
     position: relative;
+    margin-bottom: 50px;
     p {
         font-size: 16px;
         font-weight: 500;
         line-height: 27px;
         color: #1C2D41;
         width: 350px;
-        margin: 0 auto 30px;
+        margin: 0 auto;
     }
     h2 {
         color: #1C2D41;
@@ -26,6 +27,7 @@
         left: 50%;
         transform: translateX(-50%);
         bottom: 60px;
+        width: 100%;
         a.cta-btn {
             border-radius: 2px;
             background-color: #fff;
@@ -34,15 +36,35 @@
             text-transform: capitalize;
             font-size: 20px;
             padding: 20px 110px;
-            display: inline-block;
+            box-shadow: 0 14px 30px 0 rgba(23,33,18,0.06);
         }
     }
 }
 
-.become-instructor {
-    background-color: #FFE2E2;
-}
-
 .welearner-business {
     background-color: #FEE5BD;
+}
+
+
+@media (max-width: 575px) {
+    .single-cta .cta-btn-wrapper a.cta-btn {
+        padding: 20px 80px;
+    }
+
+    .single-cta {
+        padding: 40px;
+    }
+
+    .single-cta .cta-btn-wrapper {
+        bottom: 40px;
+    }
+
+    .single-cta h2 {
+        line-height: 1;
+    }
+
+    .single-cta p {
+        width: auto;
+    }
+
 }

@@ -11716,7 +11716,7 @@ img {
 }
 
 .section-title {
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .section-title h2,
@@ -12186,11 +12186,15 @@ img {
 --------------------------------------------- */
 
 .latest-blog {
-  padding: 130px 0;
+  padding: 130px 0 80px 0;
 }
 
 .single-blog-post {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+}
+
+.single-blog-post .thumbnail img {
+  width: 100%;
 }
 
 .single-blog-post .content-body h4,
@@ -12214,7 +12218,7 @@ img {
 
 .single-blog-post .content-body a.readmore {
   text-transform: capitalize;
-  font-size: 14px;
+  font-size: 16px;
   color: rgba(96, 88, 241, 0.8);
   transition: 0.3s;
 }
@@ -12227,7 +12231,7 @@ img {
 --------------------------------------------- */
 
 .cta-area {
-  padding-bottom: 130px;
+  padding-bottom: 80px;
 }
 
 .single-cta {
@@ -12235,6 +12239,7 @@ img {
   text-align: center;
   min-height: 350px;
   position: relative;
+  margin-bottom: 50px;
 }
 
 .single-cta p {
@@ -12243,7 +12248,7 @@ img {
   line-height: 27px;
   color: #1C2D41;
   width: 350px;
-  margin: 0 auto 30px;
+  margin: 0 auto;
 }
 
 .single-cta h2,
@@ -12259,6 +12264,7 @@ img {
   left: 50%;
   transform: translateX(-50%);
   bottom: 60px;
+  width: 100%;
 }
 
 .single-cta .cta-btn-wrapper a.cta-btn {
@@ -12269,15 +12275,34 @@ img {
   text-transform: capitalize;
   font-size: 20px;
   padding: 20px 110px;
-  display: inline-block;
-}
-
-.become-instructor {
-  background-color: #FFE2E2;
+  box-shadow: 0 14px 30px 0 rgba(23, 33, 18, 0.06);
 }
 
 .welearner-business {
   background-color: #FEE5BD;
+}
+
+@media (max-width: 575px) {
+  .single-cta .cta-btn-wrapper a.cta-btn {
+    padding: 20px 80px;
+  }
+
+  .single-cta {
+    padding: 40px;
+  }
+
+  .single-cta .cta-btn-wrapper {
+    bottom: 40px;
+  }
+
+  .single-cta h2,
+  .single-cta .h2 {
+    line-height: 1;
+  }
+
+  .single-cta p {
+    width: auto;
+  }
 }
 
 /* Footer
