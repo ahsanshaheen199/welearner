@@ -1,4 +1,4 @@
-# WeLearner: WordPress Theme
+# Welearner: WordPress Theme
 
 ### Requirements
 

@@ -190,4 +190,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 require get_template_directory() . '/inc/template-hooks/footer.php';
 require get_template_directory() . '/inc/template-hooks/course.php';
 require get_template_directory() . '/inc/sidebar.php';
+require get_template_directory() . '/lib/class-tgm-plugin-activation.php';
+require get_template_directory() . '/inc/plugins/tgm-plugin-activation.php';
 
