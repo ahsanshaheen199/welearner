@@ -1,13 +1,14 @@
 <?php
 
     $wp_customize->add_section('popular_topics_section',[
-		'title' => __( 'Popular Topics','weleaner' ),
+		'title' => __( 'Popular Topics','welearner' ),
 		'priority'	=> 100,
     ]);
     
     $wp_customize->add_setting( 'popular_topics_section_title', [
 		'default' => __('Popular Topics','welearner'),
 		'type'	  => 'theme_mod',
+    'sanitize_callback' => 'sanitize_text_field',
 	] );
 
 	$wp_customize->add_control( 'popular_topics_section_title', [
@@ -20,6 +21,7 @@
     $wp_customize->add_setting( 'popular_topics_btn_text', [
         'default' => __('Show All','welearner'),
         'type'	  => 'theme_mod',
+        'sanitize_callback' => 'sanitize_text_field',
     ] );
     
     $wp_customize->add_control( 'popular_topics_btn_text', array(
@@ -33,6 +35,7 @@
     $wp_customize->add_setting( 'popular_topics_btn_link', [
         'default' => '#',
         'type'	  => 'theme_mod',
+        'sanitize_callback' => 'sanitize_text_field',
     ] );
     
     $wp_customize->add_control( 'popular_topics_btn_link', array(
@@ -45,6 +48,7 @@
     $wp_customize->add_setting( 'popular_topics_count', [
 		'default' => '8',
 		'type'	  => 'theme_mod',
+    'sanitize_callback' => 'sanitize_text_field',
 	] );
 
 	$wp_customize->add_control( 'popular_topics_count', [

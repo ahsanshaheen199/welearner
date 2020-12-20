@@ -2,13 +2,14 @@
 
 
 	$wp_customize->add_section('popularcreatorsection',[
-		'title' => __( 'Popular Creator','weleaner' ),
+		'title' => __( 'Popular Creator','welearner' ),
 		'priority'	=> 140,
     ]);
     
     $wp_customize->add_setting( 'popularcreator_section_title', [
 		'default' => __('Our Popular Creator','welearner'),
 		'type'	  => 'theme_mod',
+		'sanitize_callback' => 'sanitize_text_field',
 	] );
 
 	$wp_customize->add_control( 'popularcreator_section_title', [
@@ -21,6 +22,7 @@
     $wp_customize->add_setting( 'popularcreator_section_desc', [
 		'default' => __('45+ million people are already learning on Welearners','welearner'),
 		'type'	  => 'theme_mod',
+		'sanitize_callback' => 'sanitize_text_field',
 	] );
 
 	$wp_customize->add_control( 'popularcreator_section_desc', [
@@ -33,6 +35,7 @@
 	$wp_customize->add_setting( 'popularcreator_per_page', [
 		'default' => '3',
 		'type'	  => 'theme_mod',
+		'sanitize_callback' => 'sanitize_text_field',
 	] );
 
 	$wp_customize->add_control( 'popularcreator_per_page', [
@@ -45,6 +48,7 @@
 	$wp_customize->add_setting( 'popularcreator_order', [
 		'default' => 'DESC',
 		'type'	  => 'theme_mod',
+		'sanitize_callback' => 'sanitize_text_field',
 	] );
 
 	$wp_customize->add_control( 'popularcreator_order', [
@@ -61,6 +65,7 @@
 	$wp_customize->add_setting( 'popularcreator_orderby', [
 		'default' => 'date',
 		'type'	  => 'theme_mod',
+		'sanitize_callback' => 'sanitize_text_field',
 	] );
 
 	$wp_customize->add_control( 'popularcreator_orderby', [

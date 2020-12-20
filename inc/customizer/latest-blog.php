@@ -2,13 +2,14 @@
 
 
 	$wp_customize->add_section('latestblogsection',[
-		'title' => __( 'Latest Blog','weleaner' ),
+		'title' => __( 'Latest Blog','welearner' ),
 		'priority'	=> 150,
     ]);
     
     $wp_customize->add_setting( 'blogpost_section_title', [
 		'default' => __('Learning Support features','welearner'),
 		'type'	  => 'theme_mod',
+		'sanitize_callback' => 'sanitize_text_field',
 	] );
 
 	$wp_customize->add_control( 'blogpost_section_title', [
@@ -21,6 +22,7 @@
 	$wp_customize->add_setting( 'blogpost_per_page', [
 		'default' => '3',
 		'type'	  => 'theme_mod',
+		'sanitize_callback' => 'sanitize_text_field',
 	] );
 
 	$wp_customize->add_control( 'blogpost_per_page', [
@@ -33,6 +35,7 @@
 	$wp_customize->add_setting( 'blogpost_order', [
 		'default' => 'DESC',
 		'type'	  => 'theme_mod',
+		'sanitize_callback' => 'sanitize_text_field',
 	] );
 
 	$wp_customize->add_control( 'blogpost_order', [
@@ -49,6 +52,7 @@
 	$wp_customize->add_setting( 'blogpost_orderby', [
 		'default' => 'date',
 		'type'	  => 'theme_mod',
+		'sanitize_callback' => 'sanitize_text_field',
 	] );
 
 	$wp_customize->add_control( 'blogpost_orderby', [
@@ -68,6 +72,7 @@
 	$wp_customize->add_setting( 'blogpost_category', [
 		'default' => '',
 		'type'	  => 'theme_mod',
+		'sanitize_callback' => 'sanitize_text_field',
 	] );
 
 	$wp_customize->add_control( 'blogpost_category', [

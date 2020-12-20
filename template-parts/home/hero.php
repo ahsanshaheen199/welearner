@@ -34,7 +34,7 @@
                         <p></p>
                     </div>
                     <div class="course-search-form">
-                        <form action="<?php echo site_url('/'); ?>" method="get">
+                        <form action="<?php echo esc_url(home_url('/')); ?>" method="get">
                             <input class="form-control" type="text" name="s" placeholder="<?php esc_attr_e('What do you want to learn?','welearner'); ?>"/>
                             <input type="hidden" name="post_type" value="courses" />
                             <input type="submit" alt="Search" value="<?php esc_attr_e('Search','welearner'); ?>" />

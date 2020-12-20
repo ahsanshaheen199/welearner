@@ -1,0 +1,428 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Welearner\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-20 14:09+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.0; wp-5.6\n"
+"X-Domain: welearner"
+
+#. used between list items, there is a space after the comma
+#: inc/template-tags.php:63
+msgid ", "
+msgstr ""
+
+#: inc/customizer/popular-creator.php:22
+msgid "45+ million people are already learning on Welearners"
+msgstr ""
+
+#: inc/sidebar.php:13 inc/sidebar.php:25 inc/sidebar.php:37 inc/sidebar.php:49
+#: inc/sidebar.php:61 inc/sidebar.php:73
+msgid "Add widgets here."
+msgstr ""
+
+#. Author of the theme
+msgid "Ahsan Habib Shaheen"
+msgstr ""
+
+#: inc/customizer/latest-blog.php:44 inc/customizer/popular-creator.php:56
+#: inc/customizer/testimonials.php:56 inc/customizer/toprated-course.php:69
+#: inc/customizer/tranding-course.php:69
+msgid "Ascending"
+msgstr ""
+
+#: inc/customizer/cta.php:73 inc/customizer/cta.php:141
+msgid "Background Color"
+msgstr ""
+
+#: inc/customizer/cta.php:15 inc/customizer/cta.php:83
+msgid "Become an instructor"
+msgstr ""
+
+#: inc/customizer/cta.php:60 inc/customizer/cta.php:128
+#: inc/customizer/popular-topics.php:42 inc/customizer/toprated-course.php:43
+#: inc/customizer/tranding-course.php:43
+msgid "Button Link"
+msgstr ""
+
+#: inc/customizer/cta.php:47 inc/customizer/cta.php:115
+#: inc/customizer/popular-topics.php:29 inc/customizer/toprated-course.php:30
+#: inc/customizer/tranding-course.php:30
+msgid "Button Text"
+msgstr ""
+
+#: inc/customizer/cta.php:4
+msgid "Call To Action"
+msgstr ""
+
+#: inc/customizer/latest-blog.php:77 inc/customizer/toprated-course.php:102
+#: inc/customizer/tranding-course.php:102
+msgid "Category"
+msgstr ""
+
+#: comments.php:68
+msgid "Comments are closed."
+msgstr ""
+
+#. 1: comment count number, 2: title.
+#: comments.php:41
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#. %s: Name of current post. Only visible to screen readers
+#: template-parts/content.php:40
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: inc/customizer/latest-blog.php:60 inc/customizer/popular-creator.php:72
+#: inc/customizer/testimonials.php:72 inc/customizer/toprated-course.php:85
+#: inc/customizer/tranding-course.php:85
+msgid "Date"
+msgstr ""
+
+#: inc/customizer/latest-blog.php:45 inc/customizer/popular-creator.php:57
+#: inc/customizer/testimonials.php:57 inc/customizer/toprated-course.php:70
+#: inc/customizer/tranding-course.php:70
+msgid "Descending"
+msgstr ""
+
+#. Description of the theme
+#: inc/customizer/cta.php:35 inc/customizer/cta.php:103
+#: inc/customizer/hero.php:30
+msgid "Description"
+msgstr ""
+
+#: inc/customizer/hero.php:10
+msgid "Discover a new way of learning"
+msgstr ""
+
+#. %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:100 template-parts/content-page.php:39
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: inc/sidebar.php:23
+msgid "Footer Sidebar 1"
+msgstr ""
+
+#: inc/sidebar.php:35
+msgid "Footer Sidebar 2"
+msgstr ""
+
+#: inc/sidebar.php:47
+msgid "Footer Sidebar 3"
+msgstr ""
+
+#: inc/sidebar.php:59
+msgid "Footer Sidebar 4"
+msgstr ""
+
+#: inc/sidebar.php:71
+msgid "Footer Sidebar 5"
+msgstr ""
+
+#: inc/customizer/cta.php:39 inc/customizer/cta.php:107
+msgid "Get Started"
+msgstr ""
+
+#: inc/customizer/cta.php:27 inc/customizer/cta.php:95
+msgid ""
+"Get unlimited access to 4,000+ of We Learner’s top courses for your team."
+msgstr ""
+
+#. URI of the theme
+msgid "http://underscores.me/"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://github.com/ahsanshaheen199"
+msgstr ""
+
+#: 404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: inc/customizer/latest-blog.php:10
+msgid "Learning Support features"
+msgstr ""
+
+#. %s: post title
+#: inc/template-tags.php:83
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#. used between list items, there is a space after the comma
+#: inc/template-tags.php:70
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#: inc/customizer/hero.php:22
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper "
+"dapibus turpis vel pellentesque."
+msgstr ""
+
+#: inc/customizer/testimonials.php:22
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique "
+"placerat ligula, eget blandit ante tincidunt vel"
+msgstr ""
+
+#: inc/customizer/latest-blog.php:61 inc/customizer/popular-creator.php:73
+#: inc/customizer/testimonials.php:73 inc/customizer/toprated-course.php:86
+#: inc/customizer/tranding-course.php:86
+msgid "Modified Date"
+msgstr ""
+
+#: 404.php:30
+msgid "Most Used Categories"
+msgstr ""
+
+#: single.php:24
+msgid "Next:"
+msgstr ""
+
+#: template-parts/home/latest-blog.php:63
+msgid "No Blog Post Found"
+msgstr ""
+
+#: template-parts/home/popular-creator.php:87
+msgid "No Course Author Found"
+msgstr ""
+
+#: template-parts/home/popular-topics.php:67
+#: template-parts/home/toprated-course.php:129
+#: template-parts/home/tranding-course.php:127
+msgid "No Course Topic Found"
+msgstr ""
+
+#: template-parts/home/testimonials.php:85
+msgid "No Testimonial Found"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#. 1: title.
+#: comments.php:35
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: inc/customizer/latest-blog.php:42 inc/customizer/latest-blog.php:58
+#: inc/customizer/popular-creator.php:54 inc/customizer/popular-creator.php:70
+#: inc/customizer/testimonials.php:54 inc/customizer/testimonials.php:70
+#: inc/customizer/toprated-course.php:67 inc/customizer/toprated-course.php:83
+#: inc/customizer/tranding-course.php:67 inc/customizer/tranding-course.php:83
+msgid "Order"
+msgstr ""
+
+#: inc/customizer/popular-creator.php:10
+msgid "Our Popular Creator"
+msgstr ""
+
+#: single-courses.php:22 template-parts/content-page.php:25
+#: template-parts/content.php:53
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/home/hero.php:48
+msgid "Person"
+msgstr ""
+
+#: inc/customizer/popular-topics.php:9
+msgid "Popular Topics"
+msgstr ""
+
+#. %s: post author.
+#: inc/template-tags.php:46
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#. %s: post date.
+#: inc/template-tags.php:30
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#. 1: list of categories.
+#: inc/template-tags.php:66
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#: inc/customizer/latest-blog.php:30 inc/customizer/popular-creator.php:42
+#: inc/customizer/testimonials.php:42 inc/customizer/toprated-course.php:55
+#: inc/customizer/tranding-course.php:55
+msgid "Posts Per Page"
+msgstr ""
+
+#: single.php:23
+msgid "Previous:"
+msgstr ""
+
+#: functions.php:53
+msgid "Primary"
+msgstr ""
+
+#: inc/customizer/latest-blog.php:63 inc/customizer/popular-creator.php:75
+#: inc/customizer/testimonials.php:75 inc/customizer/toprated-course.php:88
+#: inc/customizer/tranding-course.php:88
+msgid "Random"
+msgstr ""
+
+#: template-parts/home/latest-blog.php:48
+msgid "read blog"
+msgstr ""
+
+#. 1: link to WP admin new post page.
+#: template-parts/content-none.php:24
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: single-courses.php:37
+msgid "Review"
+msgstr ""
+
+#: template-parts/home/hero.php:40
+msgid "Search"
+msgstr ""
+
+#. %s: search query.
+#: search.php:21
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: inc/customizer/latest-blog.php:18 inc/customizer/popular-creator.php:18
+#: inc/customizer/popular-creator.php:30 inc/customizer/popular-topics.php:17
+#: inc/customizer/testimonials.php:18 inc/customizer/testimonials.php:30
+#: inc/customizer/toprated-course.php:18 inc/customizer/tranding-course.php:18
+msgid "Section Title"
+msgstr ""
+
+#: inc/template-functions.php:49 inc/template-functions.php:70
+msgid "Select a category"
+msgstr ""
+
+#: inc/customizer/popular-topics.php:21 inc/customizer/toprated-course.php:22
+#: inc/customizer/tranding-course.php:22
+msgid "Show All"
+msgstr ""
+
+#: inc/sidebar.php:11
+msgid "Sidebar"
+msgstr ""
+
+#: header.php:26
+msgid "Skip to content"
+msgstr ""
+
+#: template-parts/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: single-courses.php:53
+msgid "Submit Review"
+msgstr ""
+
+#. 1: list of tags.
+#: inc/template-tags.php:73
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: inc/customizer/cta.php:23 inc/customizer/cta.php:91
+#: inc/customizer/hero.php:18 inc/customizer/latest-blog.php:62
+#: inc/customizer/popular-creator.php:74 inc/customizer/testimonials.php:74
+#: inc/customizer/toprated-course.php:87 inc/customizer/tranding-course.php:87
+msgid "Title"
+msgstr ""
+
+#: inc/customizer/toprated-course.php:10
+msgid "Top Rated"
+msgstr ""
+
+#: inc/customizer/popular-topics.php:54
+msgid "Topic Count"
+msgstr ""
+
+#: inc/customizer/tranding-course.php:10
+msgid "Tranding"
+msgstr ""
+
+#. %1$s: smiley
+#: 404.php:48
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: inc/customizer/footer.php:18 inc/customizer/hero.php:61
+msgid "Upload Background Image"
+msgstr ""
+
+#: inc/customizer/hero.php:43
+msgid "Upload Person Image"
+msgstr ""
+
+#: course-search.php:71 template-parts/home/toprated-course.php:114
+#: template-parts/home/tranding-course.php:112
+msgid "Watch Preview"
+msgstr ""
+
+#. Name of the theme
+msgid "Welearner"
+msgstr ""
+
+#. Name of the template
+msgid "Welearner Home Page"
+msgstr ""
+
+#: template-parts/home/hero.php:38
+msgid "What do you want to learn?"
+msgstr ""
+
+#: inc/customizer/testimonials.php:10
+msgid "What our students have to say"
+msgstr ""
+
+#: single-courses.php:29
+msgid "Write a review"
+msgstr ""
