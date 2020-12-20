@@ -1,6 +1,6 @@
 .single-course-item {
     padding: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     border: 1px solid #EEEDFD;
     border-radius: 5px;
     .course-content-body {
@@ -84,4 +84,9 @@
             line-height: 25px;
         }
     }
+}
+
+.tranding-courses,
+.toprated-courses {
+    padding-bottom: 80px;
 }

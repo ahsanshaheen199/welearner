@@ -1,11 +1,32 @@
 <?php
-    $welearner_courses = new WP_Query([
-        'post_type'     => 'courses',
-        'posts_per_page'=> '-1',
-        'order'         => 'DESC',
-        'meta_key'   => '_welearner_course_avg_rating',
-        'orderby'    => 'meta_value_num',
-    ]);
+    $welearner_toprated_course_per_page        = get_theme_mod('toprated_course_per_page','3');
+    $welearner_toprated_course_order           = get_theme_mod('toprated_course_order','DESC');
+    $welearner_toprated_course_orderby         = get_theme_mod('toprated_course_orderby','date');
+    $welearner_toprated_course_section_title   = get_theme_mod('toprated_course_section_title','Top rated');
+    $welearner_toprated_course_category        = get_theme_mod('toprated_course_category','');
+    $welearner_toprated_course_btn_text        = get_theme_mod('toprated_course_btn_text','Show All');
+    $welearner_toprated_course_btn_link        = get_theme_mod('toprated_course_btn_link','#');
+
+    $welearner_toprated_courses_arg = [
+        'post_type'         => 'courses',
+        'posts_per_page'    => esc_attr($welearner_toprated_course_per_page),
+        'order'             => $welearner_toprated_course_order,
+        'orderby'           => $welearner_toprated_course_orderby,
+        'meta_key'          => '_welearner_course_avg_rating',
+        'orderby'           => 'meta_value_num',
+    ];
+
+    if( !empty($welearner_toprated_course_category) ) {
+        $welearner_toprated_courses_arg['tax_query'] = [
+            [
+                'taxonomy' => 'course_topic',
+                'field'    => 'term_id',
+                'terms'    => $welearner_toprated_course_category
+            ]
+        ];
+    }
+
+    $welearner_courses = new WP_Query($welearner_toprated_courses_arg);
  
 if ( $welearner_courses->have_posts() ): 
 ?>
@@ -14,11 +35,15 @@ if ( $welearner_courses->have_posts() ):
         <div class="row align-items-center mb-60">
             <div class="col-lg-6">
                 <div class="section-title mb-0">
-                    <h2 class="mb-0">Top Rated</h2>
+                    <?php if( $welearner_toprated_course_section_title  ):  ?>
+                        <h2 class="mb-0"><?php echo esc_html($welearner_toprated_course_section_title); ?></h2>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="col-lg-6 text-lg-end">
-                <a href="#" class="welearner-btn">Show All</a>
+                <?php if( !empty( $welearner_toprated_course_btn_text ) ): ?>
+                    <a href="<?php echo esc_html($welearner_toprated_course_btn_link); ?>" class="welearner-btn"><?php echo esc_html($welearner_toprated_course_btn_text); ?></a>
+                <?php endif; ?>
             </div>
         </div>
         <div class="row justify-content-center">

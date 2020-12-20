@@ -36,6 +36,12 @@ function welearner_customize_register( $wp_customize ) {
 
 	//welearner
 
+	// Tranding Course
+	require get_theme_file_path('inc/customizer/tranding-course.php');
+
+	// Top Rated Course
+	require get_theme_file_path('inc/customizer/toprated-course.php');
+
 	// Testimonials
 	require get_theme_file_path('inc/customizer/testimoials.php');
 

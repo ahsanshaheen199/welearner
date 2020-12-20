@@ -1,8 +1,30 @@
 <?php
-    $welearner_courses = new WP_Query([
-        'post_type'     => 'courses',
-        'posts_per_page'=> '-1'
-    ]);
+    $welearner_tranding_course_per_page        = get_theme_mod('tranding_course_per_page','3');
+    $welearner_tranding_course_order           = get_theme_mod('tranding_course_order','DESC');
+    $welearner_tranding_course_orderby         = get_theme_mod('tranding_course_orderby','date');
+    $welearner_tranding_course_section_title   = get_theme_mod('tranding_course_section_title','Tranding');
+    $welearner_tranding_course_category        = get_theme_mod('tranding_course_category','');
+    $welearner_tranding_course_btn_text        = get_theme_mod('tranding_course_btn_text','Show All');
+    $welearner_tranding_course_btn_link        = get_theme_mod('tranding_course_btn_link','#');
+
+    $welearner_tranding_courses_arg = [
+        'post_type'         => 'courses',
+        'posts_per_page'    => esc_attr($welearner_tranding_course_per_page),
+        'order'             => $welearner_tranding_course_order,
+        'orderby'           => $welearner_tranding_course_orderby
+    ];
+
+    if( !empty($welearner_tranding_course_category) ) {
+        $welearner_tranding_courses_arg['tax_query'] = [
+            [
+                'taxonomy' => 'course_topic',
+                'field'    => 'term_id',
+                'terms'    => $welearner_tranding_course_category
+            ]
+        ];
+    }
+
+    $welearner_courses = new WP_Query($welearner_tranding_courses_arg);
  
 if ( $welearner_courses->have_posts() ): 
 ?>
@@ -11,11 +33,15 @@ if ( $welearner_courses->have_posts() ):
         <div class="row align-items-center mb-60">
             <div class="col-lg-6">
                 <div class="section-title mb-0">
-                    <h2 class="mb-0">Tranding</h2>
+                    <?php if( !empty($welearner_tranding_course_section_title) ) : ?>
+                        <h2 class="mb-0"><?php echo esc_html($welearner_tranding_course_section_title); ?></h2>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="col-lg-6 text-lg-end">
-                <a href="#" class="welearner-btn">Show All</a>
+                <?php if( !empty( $welearner_tranding_course_btn_text ) ): ?>
+                    <a href="<?php echo esc_html($welearner_tranding_course_btn_link); ?>" class="welearner-btn"><?php echo esc_html($welearner_tranding_course_btn_text); ?></a>
+                <?php endif; ?>
             </div>
         </div>
         <div class="row justify-content-center">
