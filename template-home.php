@@ -12,5 +12,6 @@ get_header();
     get_template_part('template-parts/home/testimonials');
     get_template_part('template-parts/home/popular-creator');
     get_template_part('template-parts/home/latest-blog');
+    get_template_part('template-parts/home/cta');
 
 get_footer();

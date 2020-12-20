@@ -1,0 +1,48 @@
+.cta-area {
+    padding-bottom: 130px;
+}
+
+.single-cta {
+    padding: 60px;
+    text-align: center;
+    min-height: 350px;
+    position: relative;
+    p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 27px;
+        color: #1C2D41;
+        width: 350px;
+        margin: 0 auto 30px;
+    }
+    h2 {
+        color: #1C2D41;
+        font-size: 44px;
+        margin-bottom: 30px;
+        line-height: 28px;
+    }
+    .cta-btn-wrapper {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 60px;
+        a.cta-btn {
+            border-radius: 2px;
+            background-color: #fff;
+            color: #101030;
+            font-weight: 700;
+            text-transform: capitalize;
+            font-size: 20px;
+            padding: 20px 110px;
+            display: inline-block;
+        }
+    }
+}
+
+.become-instructor {
+    background-color: #FFE2E2;
+}
+
+.welearner-business {
+    background-color: #FEE5BD;
+}
