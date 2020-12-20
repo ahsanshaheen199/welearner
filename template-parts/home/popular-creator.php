@@ -1,10 +1,20 @@
-<?php 
-    $welearner_author = new WP_Query([
-        'post_type' => 'teachers',
-        'posts_per_page'    => -1
-    ]);
+<?php
+    $welearner_popularcreator_per_page        = get_theme_mod('popularcreator_per_page','3');
+    $welearner_popularcreator_order           = get_theme_mod('popularcreator_order','DESC');
+    $welearner_popularcreator_orderby         = get_theme_mod('popularcreator_orderby','date');
+    $welearner_popularcreator_section_title   = get_theme_mod('popularcreator_section_title','Our Popular Creator');
+    $welearner_popularcreator_section_desc    = get_theme_mod('popularcreator_section_desc','45+ million people are already learning on Welearners');
 
-    if( $welearner_author->have_posts() ) :
+    $welearner_popularcreator_arg = [
+        'post_type'         => 'teachers',
+        'posts_per_page'    => esc_attr($welearner_popularcreator_per_page),
+        'order'             => $welearner_popularcreator_order,
+        'orderby'           => $welearner_popularcreator_orderby
+    ];
+    
+    $welearner_authors = new WP_Query($welearner_popularcreator_arg);
+
+    if( $welearner_authors->have_posts() ) :
 ?>
 
 <div class="popular-creator">
@@ -12,15 +22,19 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section-title text-center">
-                    <h2>Our Popular <br /> Creator</h2>
-                    <p>45+ million people are already learning on Welearners</p>
+                    <?php if( !empty( $welearner_popularcreator_section_title ) ) : ?>
+                        <h2><?php echo wp_kses_post($welearner_popularcreator_section_title); ?></h2>
+                    <?php endif; ?>
+                    <?php if( !empty( $welearner_popularcreator_section_title ) ) : ?>
+                        <p><?php echo wp_kses_post($welearner_popularcreator_section_desc); ?></p>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
         <div class="popular-creator-slider">
             <?php 
-                while( $welearner_author->have_posts() ) :
-                    $welearner_author->the_post();
+                while( $welearner_authors->have_posts() ) :
+                    $welearner_authors->the_post();
                     $welearner_author_thumb_bg_color = get_post_meta(get_the_ID(),'_welearner_teacher_thumbnail_bg_color',true);
                     if( !empty($welearner_author_thumb_bg_color) ) {
                         $welearner_author_thumb_bg = 'style="background-color:'.esc_attr($welearner_author_thumb_bg_color).'"';

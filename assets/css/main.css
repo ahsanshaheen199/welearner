@@ -12112,10 +12112,12 @@ img {
   background-color: #e9e9e9;
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 
 .popular-creator .single-creator-item .thumbnail img {
   max-height: 350px;
+  width: 100%;
 }
 
 .popular-creator .single-creator-item .thumbnail .overlay {
@@ -12152,14 +12154,14 @@ img {
 }
 
 .popular-creator .single-creator-item .content-body {
-  padding: 30px 0 30px 30px;
+  padding: 30px 0 0 30px;
 }
 
 .popular-creator .single-creator-item .content-body h4,
 .popular-creator .single-creator-item .content-body .h4 {
   font-size: 18px;
   line-height: 31px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .popular-creator .single-creator-item .content-body h4 a,
@@ -12179,7 +12181,7 @@ img {
   line-height: 27px;
   text-transform: capitalize;
   color: #556170;
-  font-family: "Roboto", sans-serif;
+  font-family: "Yantramanav", sans-serif;
 }
 
 /* Latest Posts

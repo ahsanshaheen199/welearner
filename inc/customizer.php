@@ -36,9 +36,18 @@ function welearner_customize_register( $wp_customize ) {
 
 	//welearner
 
+	// Testimonials
+	require get_theme_file_path('inc/customizer/testimoials.php');
+
+	// Popular Creator
+	require get_theme_file_path('inc/customizer/popular-creator.php');
+
+	// latset Blog
+	require get_theme_file_path('inc/customizer/latest-blog.php');
+
 	// Call to action
 	require get_theme_file_path('inc/customizer/cta.php');
-	require get_theme_file_path('inc/customizer/latest-blog.php');
+	
 }
 add_action( 'customize_register', 'welearner_customize_register' );
 

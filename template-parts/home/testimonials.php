@@ -1,8 +1,18 @@
 <?php
-    $welearner_testimonials = new WP_Query([
-        'post_type'     => 'testimonials',
-        'posts_per_page'=> '-1',
-    ]);
+    $welearner_testimonial_per_page        = get_theme_mod('testimonial_per_page','3');
+    $welearner_testimonial_order           = get_theme_mod('testimonial_order','DESC');
+    $welearner_testimonial_orderby         = get_theme_mod('testimonial_orderby','date');
+    $welearner_testimonial_section_title   = get_theme_mod('testimonial_section_title','What our students have to say');
+    $welearner_testimonial_section_desc    = get_theme_mod('testimonial_section_desc','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique placerat ligula, eget blandit ante tincidunt vel');
+
+    $welearner_testimonial_arg = [
+        'post_type'         => 'testimonials',
+        'posts_per_page'    => esc_attr($welearner_testimonial_per_page),
+        'order'             => $welearner_testimonial_order,
+        'orderby'           => $welearner_testimonial_orderby
+    ];
+
+    $welearner_testimonials = new WP_Query($welearner_testimonial_arg);
  
 if ( $welearner_testimonials->have_posts() ): 
 ?>
@@ -11,12 +21,16 @@ if ( $welearner_testimonials->have_posts() ):
         <div class="row align-items-center justify-content-between mb-90">
             <div class="col-lg-6">
                 <div class="section-title mb-0">
-                    <h2 class="mb-0">What our students <br />have to say</h2>
+                    <?php if( !empty( $welearner_testimonial_section_title ) ) : ?>
+                        <h2 class="mb-0"><?php echo wp_kses_post($welearner_testimonial_section_title); ?></h2>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="col-lg-5 text-right">
                 <div data-bg-image="<?php echo esc_url(get_theme_file_uri('assets/images/testimonial-icon.png')); ?>" class="testimonial-section-description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique placerat ligula, eget blandit ante tincidunt vel</p>
+                    <?php if( !empty( $welearner_testimonial_section_desc ) ) : ?>
+                        <p class="mb-0"><?php echo wp_kses_post($welearner_testimonial_section_desc); ?></p>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
