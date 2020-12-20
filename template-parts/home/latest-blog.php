@@ -34,7 +34,7 @@
                 while( $welearner_latestposts->have_posts() ) :
                     $welearner_latestposts->the_post();
             ?>
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-4 col-md-6">
                 <div class="single-blog-post">
                     <?php if( has_post_thumbnail() ) : ?>
                         <div class="thumbnail">

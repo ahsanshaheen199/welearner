@@ -71,3 +71,12 @@ img {
         margin-bottom: 0;
     }
 }
+
+
+@media (max-width: 575px) {
+    .section-title {
+        h2 {
+            font-size: 32px;
+        }
+    }
+}

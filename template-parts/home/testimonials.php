@@ -26,7 +26,7 @@ if ( $welearner_testimonials->have_posts() ):
                     <?php endif; ?>
                 </div>
             </div>
-            <div class="col-lg-5 text-right">
+            <div class="col-lg-6 text-right">
                 <div data-bg-image="<?php echo esc_url(get_theme_file_uri('assets/images/testimonial-icon.png')); ?>" class="testimonial-section-description">
                     <?php if( !empty( $welearner_testimonial_section_desc ) ) : ?>
                         <p class="mb-0"><?php echo wp_kses_post($welearner_testimonial_section_desc); ?></p>

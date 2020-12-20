@@ -11734,6 +11734,13 @@ img {
   margin-bottom: 0;
 }
 
+@media (max-width: 575px) {
+  .section-title h2,
+  .section-title .h2 {
+    font-size: 32px;
+  }
+}
+
 /* Tiny Slider
 --------------------------------------------- */
 
@@ -11928,6 +11935,11 @@ img {
   text-decoration: underline;
 }
 
+.popular-topics {
+  padding-top: 130px;
+  padding-bottom: 70px;
+}
+
 /* Course
 --------------------------------------------- */
 
@@ -12031,6 +12043,10 @@ img {
   line-height: 25px;
 }
 
+.single-course-item .course-thumbnail img {
+  width: 100%;
+}
+
 .tranding-courses,
 .toprated-courses {
   padding-bottom: 80px;
@@ -12098,6 +12114,12 @@ img {
   font-family: "Playfair Display", serif;
   margin-bottom: 0;
   color: #101030;
+}
+
+@media (max-width: 991px) {
+  .testimonial-section-description {
+    margin-top: 60px;
+  }
 }
 
 /* Popular Creator

@@ -36,6 +36,9 @@ function welearner_customize_register( $wp_customize ) {
 
 	//welearner
 
+	// Popular Topics
+	require get_theme_file_path('inc/customizer/popular-topics.php');
+
 	// Tranding Course
 	require get_theme_file_path('inc/customizer/tranding-course.php');
 
@@ -43,7 +46,7 @@ function welearner_customize_register( $wp_customize ) {
 	require get_theme_file_path('inc/customizer/toprated-course.php');
 
 	// Testimonials
-	require get_theme_file_path('inc/customizer/testimoials.php');
+	require get_theme_file_path('inc/customizer/testimonials.php');
 
 	// Popular Creator
 	require get_theme_file_path('inc/customizer/popular-creator.php');

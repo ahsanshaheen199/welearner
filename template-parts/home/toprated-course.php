@@ -33,14 +33,14 @@ if ( $welearner_courses->have_posts() ):
 <div class="toprated-courses">
     <div class="container">
         <div class="row align-items-center mb-60">
-            <div class="col-lg-6">
+            <div class="col-6">
                 <div class="section-title mb-0">
                     <?php if( $welearner_toprated_course_section_title  ):  ?>
                         <h2 class="mb-0"><?php echo esc_html($welearner_toprated_course_section_title); ?></h2>
                     <?php endif; ?>
                 </div>
             </div>
-            <div class="col-lg-6 text-lg-end">
+            <div class="col-6 text-end">
                 <?php if( !empty( $welearner_toprated_course_btn_text ) ): ?>
                     <a href="<?php echo esc_html($welearner_toprated_course_btn_link); ?>" class="welearner-btn"><?php echo esc_html($welearner_toprated_course_btn_text); ?></a>
                 <?php endif; ?>
@@ -51,7 +51,7 @@ if ( $welearner_courses->have_posts() ):
                 while( $welearner_courses->have_posts() ) :
                     $welearner_courses->the_post();
             ?>
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-4 col-md-6">
                 <div class="single-course-item">
                     <?php if( has_post_thumbnail() ) : ?>
                         <div class="course-thumbnail">

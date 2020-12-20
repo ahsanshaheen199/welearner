@@ -14,7 +14,7 @@ if( jQuery('.popular-creator-slider').length ) {
       controls: false,
       nav: false,
       responsive: {
-          575: {
+          0: {
             items: 1
           },
           768: {
@@ -40,7 +40,7 @@ if( jQuery('.testimonial-slider').length ) {
       controls: false,
       nav: false,
       responsive: {
-          575: {
+          0: {
             items: 1
           },
           768: {
